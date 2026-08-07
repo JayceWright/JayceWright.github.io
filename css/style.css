@@ -221,7 +221,8 @@ img { max-width: 100%; display: block; }
 .hero__name {
   font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.18;
+  padding-bottom: 0.12em;
   background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text-muted) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -578,7 +579,7 @@ img { max-width: 100%; display: block; }
   }
 
   .hero { padding: 80px var(--space-md) 0; }
-  .hero__name { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .hero__name { font-size: clamp(2.2rem, 10vw, 4rem); line-height: 1.18; padding-bottom: 0.12em; }
 
   .project-card--featured { grid-column: unset; }
   .projects-grid { grid-template-columns: 1fr; }
