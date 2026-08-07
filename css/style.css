@@ -43,6 +43,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
+  zoom: 1.5;           /* ← эквивалент 150% в браузере для всех пользователей */
   scroll-behavior: smooth;
   font-size: 16px;
 }
@@ -174,7 +175,7 @@ img { max-width: 100%; display: block; }
    HERO
    ═══════════════════════════════════════════════ */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh / 1.5);
   display: flex;
   align-items: center;
   position: relative;
@@ -246,7 +247,7 @@ img { max-width: 100%; display: block; }
 .hero__desc {
   font-size: 1.1rem;
   color: var(--color-text-muted);
-  max-width: 560px;
+  max-width: 540px;
   margin-bottom: var(--space-xl);
   line-height: 1.7;
 }
@@ -501,7 +502,16 @@ img { max-width: 100%; display: block; }
 }
 .highlight-card:hover { border-color: var(--color-accent); }
 
-.highlight-card__icon { font-size: 1.8rem; }
+.highlight-card__icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-xs);
+}
+.highlight-card__icon-svg {
+  width: 28px;
+  height: 28px;
+  color: var(--color-accent);
+}
 .highlight-card__title {
   font-size: 1rem;
   font-weight: 600;
