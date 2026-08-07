@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jayce Wright — Backend Engineer & SRE. Java, Spring Boot, Redis, Docker, k6." />
+  <title>Jayce Wright — Backend Engineer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════ NAV ══════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__logo-bracket">[</span>
+      <span class="nav__logo-name">jayce@wright</span>
+      <span class="nav__logo-bracket">]</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#projects"  data-en="projects"     data-ru="проекты">projects</a></li>
+      <li><a href="#skills"    data-en="skills"        data-ru="навыки">skills</a></li>
+      <li><a href="#highlights" data-en="highlights"  data-ru="достижения">highlights</a></li>
+      <li><a href="#contact"   data-en="contact"       data-ru="контакты">contact</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="btn-lang" id="langToggle" aria-label="Toggle language">EN / RU</button>
+      <a href="assets/files/resume.pdf" class="btn-resume" download
+         data-en="resume ↓" data-ru="резюме ↓">resume ↓</a>
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Menu">☰</button>
+  </nav>
+
+  <!-- ══════════════════ HERO ══════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero__bg-grid" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__greeting">
+        <span class="terminal-prompt">~/</span>
+        <span data-en="hi, i'm" data-ru="привет, я">hi, i'm</span>
+      </p>
+      <h1 class="hero__name">Jayce Wright</h1>
+      <p class="hero__role" id="typedRole"></p>
+      <p class="hero__desc"
+         data-en="Backend engineer who cares about what happens at 1000 RPS — not just at 1."
+         data-ru="Backend-инженер, которому важно как ведёт себя система при 1000 RPS, а не только при одном запросе.">
+        Backend engineer who cares about what happens at 1000 RPS — not just at 1.
+      </p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary"
+           data-en="see my work →" data-ru="мои проекты →">see my work →</a>
+        <a href="#contact" class="btn btn--ghost"
+           data-en="get in touch" data-ru="связаться">get in touch</a>
+      </div>
+      <div class="hero__links">
+        <a href="https://github.com/JayceWright" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://t.me/JayceWright" target="_blank" rel="noopener" class="icon-link" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+        </a>
+        <a href="mailto:prog061204@gmail.com" class="icon-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <span>scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ PROJECTS ══════════════════ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section__title">
+        <span class="section__title-num">01.</span>
+        <span data-en="projects" data-ru="проекты">projects</span>
+      </h2>
+
+      <div class="projects-grid">
+
+        <!-- T-Reserve Engine — featured -->
+        <article class="project-card project-card--featured">
+          <div class="project-card__header">
+            <span class="project-card__tag" data-en="featured" data-ru="главный">featured</span>
+            <div class="project-card__links">
+              <a href="https://github.com/TicketRace/T-RESERVE-ENGINE" target="_blank" rel="noopener" aria-label="GitHub">↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">T-Reserve Engine</h3>
+          <p class="project-card__desc"
+             data-en="High-load ticket booking system. Dual-layer race condition protection: Redis SETNX (~2ms fast-reject) + PostgreSQL SELECT FOR UPDATE NOWAIT. 1000 VUs: avg 250ms, p95 465ms, 0 double-bookings."
+             data-ru="Высоконагруженный движок бронирования билетов. Двухуровневая защита от Race Condition: Redis SETNX (~2мс) + PostgreSQL SELECT FOR UPDATE NOWAIT. 1000 VU: avg 250мс, p95 465мс, 0 двойных бронирований.">
+            High-load ticket booking system. Dual-layer race condition protection: Redis SETNX (~2ms fast-reject) + PostgreSQL SELECT FOR UPDATE NOWAIT. 1000 VUs: avg 250ms, p95 465ms, 0 double-bookings.
+          </p>
+          <div class="project-card__stats">
+            <span class="stat"><span class="stat__num">1000</span><span class="stat__label">VU</span></span>
+            <span class="stat"><span class="stat__num">250ms</span><span class="stat__label">avg</span></span>
+            <span class="stat"><span class="stat__num">0</span><span class="stat__label">errors</span></span>
+          </div>
+          <ul class="project-card__stack">
+            <li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li>
+            <li>Redis</li><li>Docker</li><li>Prometheus</li><li>k6</li>
+          </ul>
+        </article>
+
+        <!-- CoffeeStock AI -->
+        <article class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__links">
+              <a href="https://github.com/JayceWright/CoffeeStockAI" target="_blank" rel="noopener" aria-label="GitHub">↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">CoffeeStock AI</h3>
+          <p class="project-card__desc"
+             data-en="RESTful API for automated inventory forecasting for coffee shops. Integrates OpenRouter LLM + Open-Meteo API, Rate Limiting, JMeter load testing, CI/CD on Railway."
+             data-ru="RESTful API для прогнозирования запасов кофеен. Интеграция OpenRouter LLM + Open-Meteo, Rate Limiting против DDoS, нагрузочное тестирование JMeter, CI/CD Railway.">
+            RESTful API for automated inventory forecasting. Integrates LLM + Weather API, Rate Limiting, JMeter load tests.
+          </p>
+          <ul class="project-card__stack">
+            <li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>JMeter</li>
+          </ul>
+        </article>
+
+        <!-- Shadow-Net -->
+        <article class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__links">
+              <a href="https://github.com/JayceWright" target="_blank" rel="noopener" aria-label="GitHub">↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Shadow-Net Chat</h3>
+          <p class="project-card__desc"
+             data-en="Real-time multi-user chat. WebSocket server in pure Java — no frameworks. Per-user delivery, graceful error handling, XSS protection."
+             data-ru="Многопользовательский чат. WebSocket-сервер на чистом Java без фреймворков. Адресная доставка, graceful обработка ошибок, защита от XSS.">
+            Real-time multi-user chat. WebSocket server in pure Java — no frameworks. XSS protection, graceful error handling.
+          </p>
+          <ul class="project-card__stack">
+            <li>Java</li><li>WebSocket</li><li>Vanilla JS</li>
+          </ul>
+        </article>
+
+        <!-- Habit Tracker -->
+        <article class="project-card">
+          <div class="project-card__header">
+            <div class="project-card__links">
+              <a href="https://github.com/JayceWright" target="_blank" rel="noopener" aria-label="GitHub">↗</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Habit Tracker</h3>
+          <p class="project-card__desc"
+             data-en="Fullstack CRUD app. HTTP server from scratch in pure Java — routing, file storage, CORS. Frontend: Vanilla JS with Fetch API, zero dependencies."
+             data-ru="Fullstack CRUD-приложение. HTTP-сервер с нуля на чистом Java: роутинг, файловое хранилище, CORS. Фронтенд: Vanilla JS, 0 зависимостей.">
+            HTTP server from scratch in pure Java. Routing, CORS, file storage. Frontend: Vanilla JS, zero dependencies.
+          </p>
+          <ul class="project-card__stack">
+            <li>Java</li><li>Vanilla JS</li><li>REST</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ SKILLS ══════════════════ -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <h2 class="section__title">
+        <span class="section__title-num">02.</span>
+        <span data-en="skills" data-ru="навыки">skills</span>
+      </h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3 class="skill-group__title" data-en="Backend" data-ru="Backend">Backend</h3>
+          <div class="skill-tags">
+            <span>Java 21</span><span>Spring Boot 3</span><span>Spring Security</span>
+            <span>Hibernate / JPA</span><span>Maven</span><span>JUnit 5</span><span>Mockito</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title" data-en="Data" data-ru="Данные">Data</h3>
+          <div class="skill-tags">
+            <span>PostgreSQL 16</span><span>Redis 7</span><span>RabbitMQ</span>
+            <span>Flyway</span><span>SQL</span><span>Testcontainers</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title" data-en="Infrastructure" data-ru="Инфраструктура">Infrastructure</h3>
+          <div class="skill-tags">
+            <span>Docker</span><span>Nginx</span><span>GitHub Actions</span>
+            <span>Prometheus</span><span>Grafana</span><span>Linux</span><span>Railway</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title" data-en="Load & Reliability" data-ru="Нагрузка и надёжность">Load & Reliability</h3>
+          <div class="skill-tags">
+            <span>k6</span><span>JMeter</span><span>Distributed Locking</span>
+            <span>Graceful Degradation</span><span>Circuit Breaker</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ HIGHLIGHTS ══════════════════ -->
+  <section class="section" id="highlights">
+    <div class="container">
+      <h2 class="section__title">
+        <span class="section__title-num">03.</span>
+        <span data-en="highlights" data-ru="достижения">highlights</span>
+      </h2>
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-card__icon">🏆</div>
+          <h3 class="highlight-card__title"
+              data-en="Kod Sporta — Winner"
+              data-ru="Код Спорта — Победитель">Kod Sporta — Winner</h3>
+          <p class="highlight-card__desc"
+             data-en="T-Bank team hackathon. Team of 3. 2026."
+             data-ru="Командный хакатон Т-Банка. Команда из 3 человек. 2026.">
+            T-Bank team hackathon. Team of 3. 2026.
+          </p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-card__icon">🏦</div>
+          <h3 class="highlight-card__title"
+              data-en="T-Bank × HSE Practicum"
+              data-ru="Т-Банк × ВШЭ Практикум">T-Bank × HSE Practicum</h3>
+          <p class="highlight-card__desc"
+             data-en="Backend Lead in a 5-person team. 600+ hours. Public defence before T-Bank & HSE jury."
+             data-ru="Backend Lead команды из 5 человек. 600+ часов. Публичная защита перед жюри Т-Банка и ВШЭ.">
+            Backend Lead, 5-person team. 600+ hours. Public defence before T-Bank & HSE jury.
+          </p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-card__icon">📊</div>
+          <h3 class="highlight-card__title"
+              data-en="1000 VU — 0 errors"
+              data-ru="1000 VU — 0 ошибок">1000 VU — 0 errors</h3>
+          <p class="highlight-card__desc"
+             data-en="k6 load test result: avg 250ms, p95 465ms, 0 double-bookings, 0 5xx errors."
+             data-ru="Результат нагрузочного теста k6: avg 250мс, p95 465мс, 0 двойных бронирований, 0 ошибок 5xx.">
+            k6 load test: avg 250ms, p95 465ms, 0 double-bookings, 0 5xx errors.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ CONTACT ══════════════════ -->
+  <section class="section section--alt" id="contact">
+    <div class="container container--narrow">
+      <h2 class="section__title">
+        <span class="section__title-num">04.</span>
+        <span data-en="contact" data-ru="контакты">contact</span>
+      </h2>
+      <p class="contact__desc"
+         data-en="Open to interesting projects, internships, and full-time roles."
+         data-ru="Открыт к интересным проектам, стажировкам и полной занятости.">
+        Open to interesting projects, internships, and full-time roles.
+      </p>
+      <div class="contact__links">
+        <a href="mailto:prog061204@gmail.com" class="contact__link">
+          <span class="contact__link-label">email</span>
+          prog061204@gmail.com
+        </a>
+        <a href="https://t.me/JayceWright" target="_blank" rel="noopener" class="contact__link">
+          <span class="contact__link-label">telegram</span>
+          @JayceWright
+        </a>
+        <a href="https://github.com/JayceWright" target="_blank" rel="noopener" class="contact__link">
+          <span class="contact__link-label">github</span>
+          JayceWright
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer class="footer">
+    <span class="terminal-prompt">~/jayce</span>
+    <span data-en="built with vanilla JS & caffeine"
+          data-ru="сделано на Vanilla JS и кофе">built with vanilla JS & caffeine</span>
+    <span>2026</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
