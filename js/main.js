@@ -69,7 +69,7 @@ function applyLang(lang) {
   // Кнопка Resume тоже обновляется
   const resumeBtn = document.querySelector('.btn-resume');
   if (resumeBtn) {
-    resumeBtn.textContent = lang === 'ru' ? 'резюме ↓' : 'resume ↓';
+    resumeBtn.textContent = lang === 'ru' ? 'файл ↓' : 'file ↓';
   }
 
   // Обновить typed role при смене языка
@@ -143,7 +143,7 @@ function initTypedRole(lang) {
 function initScrollReveal() {
   // Навешиваем класс reveal на карточки автоматически
   const targets = document.querySelectorAll(
-    '.project-card, .skill-group, .highlight-card, .contact__link, .section__title'
+    '.project-card, .skill-group, .highlight-card, .contact-card, .contact__link, .section__title'
   );
 
   targets.forEach(el => el.classList.add('reveal'));

@@ -30,7 +30,7 @@
     <div class="nav__actions">
       <button class="btn-lang" id="langToggle" aria-label="Toggle language">EN / RU</button>
       <a href="assets/files/resume.pdf" class="btn-resume" download
-         data-en="resume ↓" data-ru="резюме ↓">resume ↓</a>
+         data-en="file ↓" data-ru="файл ↓">file ↓</a>
     </div>
     <button class="nav__burger" id="burger" aria-label="Menu">☰</button>
   </nav>
@@ -223,8 +223,8 @@
               data-en="Kod Sporta — Winner"
               data-ru="Код Спорта — Победитель">Kod Sporta — Winner</h3>
           <p class="highlight-card__desc"
-             data-en="T-Bank team hackathon. Team of 3. 2026."
-             data-ru="Командный хакатон Т-Банка. Команда из 3 человек. 2026.">
+             data-en="T-Bank Team Competitive Programming Contest. Team of 3. 2026."
+             data-ru="Командное соревнование по спорт программированию от Т-Банка. Команда из 3 человек. 2026.">
             T-Bank team hackathon. Team of 3. 2026.
           </p>
         </div>
@@ -236,8 +236,8 @@
               data-en="T-Bank × HSE Practicum"
               data-ru="Т-Банк × ВШЭ Практикум">T-Bank × HSE Practicum</h3>
           <p class="highlight-card__desc"
-             data-en="Backend Lead in a 5-person team. 600+ hours. Public defence before T-Bank & HSE jury."
-             data-ru="Backend Lead команды из 5 человек. 600+ часов. Публичная защита перед жюри Т-Банка и ВШЭ.">
+             data-en="Backend Lead in a 5-person team. 600+ hours in 10 weeks. Public defence before T-Bank & HSE jury."
+             data-ru="Backend Lead команды из 5 человек. 600+ часов за 10 недель. Публичная защита перед жюри Т-Банка и ВШЭ.">
             Backend Lead, 5-person team. 600+ hours. Public defence before T-Bank & HSE jury.
           </p>
         </div>
@@ -260,7 +260,7 @@
 
   <!-- ══════════════════ CONTACT ══════════════════ -->
   <section class="section section--alt" id="contact">
-    <div class="container container--narrow">
+    <div class="container">
       <h2 class="section__title">
         <span class="section__title-num">04.</span>
         <span data-en="contact" data-ru="контакты">contact</span>
@@ -270,18 +270,36 @@
          data-ru="Открыт к интересным проектам, стажировкам и полной занятости.">
         Open to interesting projects, internships, and full-time roles.
       </p>
-      <div class="contact__links">
-        <a href="mailto:prog061204@gmail.com" class="contact__link">
-          <span class="contact__link-label">email</span>
-          prog061204@gmail.com
+      <div class="contact-grid">
+        <a href="mailto:prog061204@gmail.com" class="contact-card">
+          <div class="contact-card__header">
+            <svg class="contact-card__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span class="contact-card__arrow">↗</span>
+          </div>
+          <div class="contact-card__body">
+            <span class="contact-card__label">EMAIL</span>
+            <span class="contact-card__value">prog061204@gmail.com</span>
+          </div>
         </a>
-        <a href="https://t.me/JayceWright" target="_blank" rel="noopener" class="contact__link">
-          <span class="contact__link-label">telegram</span>
-          @JayceWright
+        <a href="https://t.me/JayceWright" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card__header">
+            <svg class="contact-card__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
+            <span class="contact-card__arrow">↗</span>
+          </div>
+          <div class="contact-card__body">
+            <span class="contact-card__label">TELEGRAM</span>
+            <span class="contact-card__value">@JayceWright</span>
+          </div>
         </a>
-        <a href="https://github.com/JayceWright" target="_blank" rel="noopener" class="contact__link">
-          <span class="contact__link-label">github</span>
-          JayceWright
+        <a href="https://github.com/JayceWright" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card__header">
+            <svg class="contact-card__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span class="contact-card__arrow">↗</span>
+          </div>
+          <div class="contact-card__body">
+            <span class="contact-card__label">GITHUB</span>
+            <span class="contact-card__value">JayceWright</span>
+          </div>
         </a>
       </div>
     </div>
