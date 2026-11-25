@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jayce Wright — Backend Engineer & SRE. Java, Spring Boot, Redis, Docker, k6." />
-  <title>Jayce Wright — Backend Engineer</title>
+  <meta name="description" content="Jayce Wright — Software Engineer. Go, PostgreSQL, Google Cloud, MCP, Java, Spring Boot." />
+  <title>Jayce Wright — Software Engineer</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,9 +46,9 @@
       <h1 class="hero__name">Jayce Wright</h1>
       <p class="hero__role" id="typedRole"></p>
       <p class="hero__desc"
-         data-en="Backend engineer who cares about what happens at 1000 RPS — not just at 1."
-         data-ru="Backend-инженер, которому важно как ведёт себя система при 1000 RPS, а не только при одном запросе.">
-        Backend engineer who cares about what happens at 1000 RPS — not just at 1.
+         data-en="Building backends that keep working under load and are easy to integrate with. At Xsolla: built in Go a service that stores and delivers game assets, for people and AI agents alike."
+         data-ru="Пишу бэкенды, которые держат нагрузку и с которыми просто интегрироваться. В Xsolla делал на Go сервис, который хранит и доставляет игровые ассеты для людей и AI-агентов.">
+        Building backends that keep working under load and are easy to integrate with. At Xsolla: built in Go a service that stores and delivers game assets, for people and AI agents alike.
       </p>
       <div class="hero__cta">
         <a href="#projects" class="btn btn--primary"
@@ -84,19 +84,41 @@
 
       <div class="projects-grid">
 
-        <!-- T-Reserve Engine — featured -->
+        <!-- Digital Asset Manager · Xsolla — featured -->
         <article class="project-card project-card--featured">
           <div class="project-card__header">
-            <span class="project-card__tag" data-en="featured" data-ru="главный">featured</span>
+            <span class="project-card__tag" data-en="Xsolla · Sep–Nov 2026" data-ru="Xsolla · сен–ноя 2026">Xsolla · Sep–Nov 2026</span>
+          </div>
+          <h3 class="project-card__title">Digital Asset Manager · Xsolla</h3>
+          <p class="project-card__desc"
+             data-en="Stores, processes and delivers game assets for Xsolla. Resumable uploads to Google Cloud Storage, image and 3D processing, CDN delivery on Cloudflare Workers with signed and one-time links, account webhooks, damctl CLI, and a remote MCP server with its own OAuth 2.1 so AI agents can work with assets safely."
+             data-ru="Хранит, обрабатывает и доставляет игровые ассеты Xsolla. Возобновляемая загрузка в Google Cloud Storage, обработка изображений и 3D-моделей, CDN-доставка на Cloudflare Workers с подписанными и одноразовыми ссылками, вебхуки аккаунтов, CLI damctl и удалённый MCP-сервер с собственным OAuth 2.1, чтобы AI-агенты могли безопасно работать с ассетами.">
+            Stores, processes and delivers game assets for Xsolla. Resumable uploads to Google Cloud Storage, image and 3D processing, CDN delivery on Cloudflare Workers with signed and one-time links, account webhooks, damctl CLI, and a remote MCP server with its own OAuth 2.1 so AI agents can work with assets safely.
+          </p>
+          <div class="project-card__stats">
+            <span class="stat"><span class="stat__num">Go</span><span class="stat__label">backend</span></span>
+            <span class="stat"><span class="stat__num">MCP</span><span class="stat__label">for AI agents</span></span>
+            <span class="stat"><span class="stat__num">OAuth 2.1</span><span class="stat__label">auth</span></span>
+          </div>
+          <ul class="project-card__stack">
+            <li>Go</li><li>PostgreSQL</li><li>OpenAPI</li><li>MCP</li>
+            <li>OAuth 2.1</li><li>GCS</li><li>Pub/Sub</li><li>Cloudflare Workers</li>
+            <li>TypeScript</li><li>OpenTelemetry</li><li>Kubernetes</li><li>GitLab CI</li>
+          </ul>
+        </article>
+
+        <!-- T-Reserve Engine -->
+        <article class="project-card">
+          <div class="project-card__header">
             <div class="project-card__links">
               <a href="https://github.com/TicketRace/T-RESERVE-ENGINE" target="_blank" rel="noopener" aria-label="GitHub">↗</a>
             </div>
           </div>
           <h3 class="project-card__title">T-Reserve Engine</h3>
           <p class="project-card__desc"
-             data-en="High-load ticket booking system. Dual-layer race condition protection: Redis SETNX (~2ms fast-reject) + PostgreSQL SELECT FOR UPDATE NOWAIT. 1000 VUs: avg 250ms, p95 465ms, 0 double-bookings."
-             data-ru="Высоконагруженный движок бронирования билетов. Двухуровневая защита от Race Condition: Redis SETNX (~2мс) + PostgreSQL SELECT FOR UPDATE NOWAIT. 1000 VU: avg 250мс, p95 465мс, 0 двойных бронирований.">
-            High-load ticket booking system. Dual-layer race condition protection: Redis SETNX (~2ms fast-reject) + PostgreSQL SELECT FOR UPDATE NOWAIT. 1000 VUs: avg 250ms, p95 465ms, 0 double-bookings.
+             data-en="Seat booking for the moment sales open — concerts, cinemas, sports. Redis SETNX rejects 999 of 1000 requests for a taken seat in ~2 ms; PostgreSQL SELECT FOR UPDATE NOWAIT picks the one winner — zero double-bookings, even with Redis down."
+             data-ru="Бронирование мест в момент старта продаж — концерты, кино, спорт. Redis SETNX отсекает 999 из 1000 запросов на занятое место за ~2 мс, а PostgreSQL SELECT FOR UPDATE NOWAIT выбирает единственного победителя — ноль двойных бронирований, даже если Redis недоступен.">
+            Seat booking for the moment sales open — concerts, cinemas, sports. Redis SETNX rejects 999 of 1000 requests for a taken seat in ~2 ms; PostgreSQL SELECT FOR UPDATE NOWAIT picks the one winner — zero double-bookings, even with Redis down.
           </p>
           <div class="project-card__stats">
             <span class="stat"><span class="stat__num">1000</span><span class="stat__label">VU</span></span>
@@ -176,31 +198,33 @@
       </h2>
       <div class="skills-grid">
         <div class="skill-group">
+          <h3 class="skill-group__title" data-en="Languages" data-ru="Языки">Languages</h3>
+          <div class="skill-tags">
+            <span>Go</span><span>Java 21</span><span>TypeScript</span><span>Python</span><span>SQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
           <h3 class="skill-group__title" data-en="Backend" data-ru="Backend">Backend</h3>
           <div class="skill-tags">
-            <span>Java 21</span><span>Spring Boot 3</span><span>Spring Security</span>
-            <span>Hibernate / JPA</span><span>Maven</span><span>JUnit 5</span><span>Mockito</span>
+            <span>oapi-codegen</span><span>MCP</span><span>OAuth 2.1</span><span>Spring Boot 3</span><span>Spring Security</span><span>FastAPI</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3 class="skill-group__title" data-en="Data" data-ru="Данные">Data</h3>
+          <h3 class="skill-group__title" data-en="Data &amp; messaging" data-ru="Данные и сообщения">Data &amp; messaging</h3>
           <div class="skill-tags">
-            <span>PostgreSQL 16</span><span>Redis 7</span><span>RabbitMQ</span>
-            <span>Flyway</span><span>SQL</span><span>Testcontainers</span>
+            <span>PostgreSQL</span><span>Redis</span><span>RabbitMQ</span><span>Pub/Sub</span><span>Flyway</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3 class="skill-group__title" data-en="Infrastructure" data-ru="Инфраструктура">Infrastructure</h3>
+          <h3 class="skill-group__title" data-en="Cloud &amp; infra" data-ru="Облако и инфраструктура">Cloud &amp; infra</h3>
           <div class="skill-tags">
-            <span>Docker</span><span>Nginx</span><span>GitHub Actions</span>
-            <span>Prometheus</span><span>Grafana</span><span>Linux</span><span>Railway</span>
+            <span>Google Cloud Storage</span><span>Cloudflare Workers</span><span>Kubernetes</span><span>Helm</span><span>Docker</span><span>GitLab CI</span><span>GitHub Actions</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3 class="skill-group__title" data-en="Load & Reliability" data-ru="Нагрузка и надёжность">Load & Reliability</h3>
+          <h3 class="skill-group__title" data-en="Quality &amp; reliability" data-ru="Качество и надёжность">Quality &amp; reliability</h3>
           <div class="skill-tags">
-            <span>k6</span><span>JMeter</span><span>Distributed Locking</span>
-            <span>Graceful Degradation</span><span>Circuit Breaker</span>
+            <span>OpenTelemetry</span><span>Datadog</span><span>Prometheus</span><span>Grafana</span><span>k6</span><span>mutation testing</span><span>LLM evals</span><span>Testcontainers</span><span>SonarQube</span>
           </div>
         </div>
       </div>
@@ -236,9 +260,9 @@
               data-en="T-Bank × HSE Practicum"
               data-ru="Т-Банк × ВШЭ Практикум">T-Bank × HSE Practicum</h3>
           <p class="highlight-card__desc"
-             data-en="Backend Lead in a 5-person team. 600+ hours in 10 weeks. Public defence before T-Bank & HSE jury."
-             data-ru="Backend Lead команды из 5 человек. 600+ часов за 10 недель. Публичная защита перед жюри Т-Банка и ВШЭ.">
-            Backend Lead, 5-person team. 600+ hours. Public defence before T-Bank & HSE jury.
+             data-en="Backend Lead in a 5-person team for 10 weeks, built the CI/CD pipeline from scratch. Public defence before T-Bank and HSE jury."
+             data-ru="Backend Lead в команде из 5 человек на протяжении 10 недель, с нуля выстроил CI/CD-пайплайн. Публичная защита перед жюри Т-Банка и ВШЭ.">
+            Backend Lead in a 5-person team for 10 weeks, built the CI/CD pipeline from scratch. Public defence before T-Bank and HSE jury.
           </p>
         </div>
         <div class="highlight-card">
@@ -246,12 +270,12 @@
             <svg class="highlight-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
           <h3 class="highlight-card__title"
-              data-en="1000 VU — 0 errors"
-              data-ru="1000 VU — 0 ошибок">1000 VU — 0 errors</h3>
+              data-en="Software Engineer · Xsolla"
+              data-ru="Software Engineer · Xsolla">Software Engineer · Xsolla</h3>
           <p class="highlight-card__desc"
-             data-en="k6 load test result: avg 250ms, p95 465ms, 0 double-bookings, 0 5xx errors."
-             data-ru="Результат нагрузочного теста k6: avg 250мс, p95 465мс, 0 двойных бронирований, 0 ошибок 5xx.">
-            k6 load test: avg 250ms, p95 465ms, 0 double-bookings, 0 5xx errors.
+             data-en="Sep–Nov 2026. Go backend for game assets: REST API, CDN delivery, webhooks and a remote MCP server for AI agents."
+             data-ru="Сентябрь–ноябрь 2026. Go-бэкенд для игровых ассетов: REST API, CDN-доставка, вебхуки и удалённый MCP-сервер для AI-агентов.">
+            Sep–Nov 2026. Go backend for game assets: REST API, CDN delivery, webhooks and a remote MCP server for AI agents.
           </p>
         </div>
       </div>
@@ -266,9 +290,9 @@
         <span data-en="contact" data-ru="контакты">contact</span>
       </h2>
       <p class="contact__desc"
-         data-en="Open to interesting projects, internships, and full-time roles."
-         data-ru="Открыт к интересным проектам, стажировкам и полной занятости.">
-        Open to interesting projects, internships, and full-time roles.
+         data-en="Open to full-time roles and interesting projects. Perm · Moscow · Yekaterinburg · remote."
+         data-ru="Открыт к предложениям о работе и интересным проектам. Пермь · Москва · Екатеринбург · удалённо.">
+        Open to full-time roles and interesting projects. Perm · Moscow · Yekaterinburg · remote.
       </p>
       <div class="contact-grid">
         <a href="mailto:prog061204@gmail.com" class="contact-card">

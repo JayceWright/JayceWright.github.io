@@ -81,14 +81,14 @@ function applyLang(lang) {
 ─────────────────────────────────────────── */
 const ROLES = {
   en: [
-    'Backend Engineer',
-    'SRE Enthusiast',
-    'Systems Thinker',
+    'Software Engineer',
+    'Go · Java',
+    'APIs for people & AI agents',
   ],
   ru: [
-    'Backend-разработчик',
-    'SRE Enthusiast',
-    'Системный инженер',
+    'Software Engineer',
+    'Go · Java',
+    'API для людей и AI-агентов',
   ]
 };
 
